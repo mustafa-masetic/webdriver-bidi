@@ -4,8 +4,7 @@
   "description": "Webdriver-BiDi Demo",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/basic_auth.js",
-    "test:mocha": "mocha"
+    "test": "mocha"
   },
   "keywords": [
     "Selenium",
