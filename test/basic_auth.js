@@ -1,3 +1,5 @@
+// basic_auth.js
+
 require('chromedriver');
 const { Builder } = require('selenium-webdriver');
 const { Options } = require('selenium-webdriver/chrome');
