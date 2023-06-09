@@ -1,7 +1,7 @@
 require('chromedriver');
 const { Builder } = require('selenium-webdriver');
-var assert = require('assert');
 const { Options } = require('selenium-webdriver/chrome');
+var assert = require('assert');
 
 describe('webdriver bidi tests', async function () {
   this.timeout(0)
