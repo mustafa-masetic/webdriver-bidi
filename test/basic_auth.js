@@ -1,6 +1,7 @@
 require('chromedriver');
 const { Builder } = require('selenium-webdriver');
 var assert = require('assert');
+const { Options } = require('selenium-webdriver/chrome');
 
 describe('webdriver bidi tests', async function () {
   this.timeout(0)
@@ -8,6 +9,7 @@ describe('webdriver bidi tests', async function () {
   it('basic authentication', async function () {
     let driver = await new Builder()
       .forBrowser('chrome')
+      .setChromeOptions(new Options().addArguments('--headless'))
       .build();
 
     const pageCdpConnection = await driver.createCDPConnection('page');

@@ -8,6 +8,7 @@ describe('webdriver bidi tests', async function () {
   it('log console logs and exceptions', async function () {
     let driver = await new Builder()
       .forBrowser('chrome')
+      .setChromeOptions(new Options().addArguments('--headless'))
       .build();
 
     const pageCdpConnection = await driver.createCDPConnection('page');
