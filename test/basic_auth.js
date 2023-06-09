@@ -1,8 +1,11 @@
 require('chromedriver');
-const {Builder} = require('selenium-webdriver');
+const { Builder } = require('selenium-webdriver');
+var assert = require('assert');
 
-(async function example() {
-  try {
+describe('webdriver bidi tests', async function () {
+  this.timeout(0)
+
+  it('basic authentication', async function () {
     let driver = await new Builder()
       .forBrowser('chrome')
       .build();
@@ -10,8 +13,12 @@ const {Builder} = require('selenium-webdriver');
     const pageCdpConnection = await driver.createCDPConnection('page');
     await driver.register('admin', 'admin', pageCdpConnection);
     await driver.get('https://the-internet.herokuapp.com/basic_auth');
+
+    let title = await driver.getTitle();
+    assert.equal('The Internet', title);
+
+    console.log(`log title: ${title}`);
+
     await driver.quit();
-  }catch (e){
-    console.log(e)
-  }
-}())
+  });
+});

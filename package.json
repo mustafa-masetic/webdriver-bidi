@@ -1,0 +1,22 @@
+{
+  "name": "webdriver-bidi",
+  "version": "1.0.0",
+  "description": "Webdriver-BiDi Demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/basic_auth.js",
+    "test:mocha": "mocha"
+  },
+  "keywords": [
+    "Selenium",
+    "Webdriver-BiDi",
+    "Testautomation"
+  ],
+  "author": "Mustafa Masetic",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^113.0.0",
+    "mocha": "^10.2.0",
+    "selenium-webdriver": "^4.9.2"
+  }
+}
