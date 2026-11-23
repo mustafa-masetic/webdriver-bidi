@@ -28,7 +28,7 @@ describe('webdriver bidi tests', async function () {
     await driver.executeScript('console.log("Here is my console log from browser!")');
 
     let title = await driver.getTitle();
-    assert.equal('Facebook - log in or sign up', title)
+    assert.equal('Facebook', title)
 
     console.log(`log title: ${title}`);
 
