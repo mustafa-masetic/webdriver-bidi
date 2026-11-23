@@ -14,7 +14,7 @@
   "author": "Mustafa Masetic",
   "license": "ISC",
   "devDependencies": {
-    "chromedriver": "^113.0.0",
+    "chromedriver": "^157.0.2",
     "mocha": "^10.2.0",
     "selenium-webdriver": "^4.9.2"
   }
